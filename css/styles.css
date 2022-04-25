@@ -1,0 +1,214 @@
+/* https://colorhunt.co/palette/f1ddbf525e7578938a92ba92 */
+
+/*     font-family: 'Antic Slab', serif;
+
+    font-family: 'Quicksand', sans-serif; */
+
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+/* Ändringar av taggar */
+
+/* Tar bort vita kanter */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F1DDBF;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Antic Slab', serif;
+}
+
+
+
+/* HEADER */
+.page-header {
+    background-color: #92BA92;
+    height: 80px;
+    width: 100%;
+
+    font-size: 2rem;
+    color:#92BA92;
+}
+
+#header-logo {
+    position: absolute;
+    height: 60px;
+    vertical-align: middle;
+    left: 20px;
+    top: 10px;
+    transition: background-color, 0.2s;
+    cursor: pointer;
+}
+
+#header-logo:hover {
+    background-color: #78938A;
+}
+
+.header-navbar {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+}
+
+.header-navbar > a {
+    margin: 10px;
+    padding: 10px;
+    transition: background-color, 0.2s;
+}
+
+.header-nav-link {
+    font-family: 'Antic Slab', serif;
+}
+
+.header-nav-link:hover {
+    background-color: #78938A;
+}
+
+
+.header-dropdown-menu {
+    position:absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.header-dropdown-icon {
+    height: 50px;
+}
+
+.header-navbar-dropdown {
+    display: none;
+    background-color: #92BA92;
+    position:absolute;
+    width: 100px;
+    right: 50px;
+    top: 0px;
+    font-size: 1.5rem;
+}
+
+.header-navbar-dropdown > a {
+    margin: 5px;
+    padding: 2px;
+    transition: background-color, 0.2s;
+}
+
+.header-dropdown-menu:hover > nav {
+    display:block;
+}
+
+.header-navbar-dropdown:hover {
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .header-dropdown-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-navbar {
+        display: none;
+    }
+}
+
+/* FOOTER */
+#footer {
+    position:sticky;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* SECTION HEADER */
+.section-header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* IMAGE SECTION */
+#image-section {
+    text-align: center;
+    margin: auto;
+    
+}
+
+.image-container {
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section-logo {
+    position:absolute;
+    width: 60%;
+    margin: auto;
+    z-index: 2;
+}
+
+.image-section-image {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    object-fit:cover;
+}
+
+/* media query för telefon */
+@media screen and (max-width: 600px) {
+    .image-section-image {
+        height: 700px;
+    }
+    .image-section-logo {
+        width: 80%;
+    }
+}
+
+/* MISSION SECTION */
+#mission-section {
+
+}
+
+.section-container {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mission-list {
+    font-size: 2em;
+}
+
+.mission-text-container {
+    text-align: center;
+    width: 40%;
+    font-size: 1.5rem;
+}
+
+.mission-text-header {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+
+/* Bottom plant AESTHETIC */
+.bottom-plant {
+    display:flex;
+    width: 40%;
+    align-items: flex-end;
+    justify-content:space-around;
+    margin: auto;
+    z-index: 1;
+}
+
