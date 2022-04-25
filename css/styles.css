@@ -4,9 +4,6 @@
 
     font-family: 'Quicksand', sans-serif; */
 
-* {
-    font-family: "Quicksand", sans-serif;
-}
 /* Ändringar av taggar */
 
 /* Tar bort vita kanter */
@@ -21,6 +18,11 @@ a {
     text-decoration: none;
 }
 
+/* FONTS */
+* {
+    font-family: "Quicksand", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -30,6 +32,7 @@ h6 {
     font-family: "Antic Slab", serif;
 }
 
+/* GENERELLT FÖR SECTIONS */
 section {
     margin: 0;
     padding: 0;
@@ -320,7 +323,7 @@ dd {
     border-radius: 10px;
     transition: background-color 0.2s;
     cursor: pointer;
-    border: #525E75 solid 1px;
+    border: #525e75 solid 1px;
 }
 
 .cta-button:hover {
@@ -333,28 +336,197 @@ dd {
     }
 }
 
-
 /* ABOUT PAGE */
 
-#about-intro-section {
-    
+/* intro section */
+.about-intro-container {
+    padding: 0 0 40px 0;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 3%;
+    justify-content: space-evenly;
+    align-items: top;
+    font-size: 1.5rem;
 }
 
-.about-intro-container {
+@media screen and (max-width: 600px) {
+    .about-intro-container {
+        display: block;
+        text-align: center;
+    }
+    .about-intro-image-container {
+        display: none;
+    }
+}
 
+.about-intro-text {
+    grid-column-start: 2;
+    justify-self: center;
+}
+
+.about-intro-image-container {
+    grid-column-start: 3;
+}
+
+.about-intro-image {
+    max-width: 100%;
+}
+
+/* about the product */
+#about-the-product-section {
+    background-color: #78938a;
+    padding: 1px 0 0 0;
+    z-index: 1;
+}
+
+.rating-container {
+    padding: 0 0 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    column-gap: 15px;
+}
+
+.rating {
+    justify-self: center;
+    background-color: #f1ddbf;
+    border-radius: 25px;
+    margin: 0 20px;
+    max-width: 280px;
+}
+
+@media screen and (max-width: 600px) {
+    .rating-container {
+        display: block;
+        justify-content: center;
+    }
+
+    .rating {
+        margin: auto;
+    }
+}
+
+.rating-sender {
+    color: #525e75;
+}
+
+.about-the-product-container {
+    padding: 0 0 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: top;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 15px 15px;
+    column-gap: 10px;
+}
+
+.about-the-product-text {
+    margin: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+@media screen and (max-width: 600px) {
+    .about-the-product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* product benchmark */
+#about-product-benchmark {
+    text-align: center;
+    display: block;
+    padding-bottom: 60px;
+}
+
+.z-index-ten {
+    position: relative;
+    z-index: 10;
+}
+
+.table-text {
+    position: relative;
+    z-index: 10;
+    background-color: #f1ddbf;
+}
+
+.table-container {
+    position: relative;
+    z-index: 10;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: auto;
+}
+
+.performance-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 1.1em;
+    background-color: #f1ddbf;
+}
+td {
+    font-size: 0.9em;
+}
+
+td,
+th {
+    border: #525e75 1px solid;
+}
+
+tr:nth-child(2) {
+    background-color: #92ba92;
+}
+tr:not(:nth-child(2), :nth-child(1)) {
+    background-color: #ff5e50;
+}
+
+/* ABOUT CTA SECTION */
+#about-cta-section {
+    display: block;
+    text-align: center;
+    background-color: #78938a;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+.about-cta-container {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+}
+
+.about-cta-header {
+    background-color: #78938a;
 }
 
 /* Bottom plant AESTHETIC */
 .plant-background {
     background: url("/img/bottom-plant.png") no-repeat center bottom;
     background-size: contain;
+    z-index: 10;
+}
+
+.bottom-plant-container {
+    position: relative;
 }
 
 .bottom-plant {
     position: absolute;
-    width: 30%;
+    width: 70%;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 1;
+    bottom: 0;
 }
