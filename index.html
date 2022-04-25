@@ -16,7 +16,7 @@
 
     <body>
         <header class="page-header">
-            <a class="header-logo-link">
+            <a class="header-logo-link" href="/index.html">
                 <img id="header-logo" src="./img/logos/bepro-logo-small.png" alt="BePro logo">
             </a>
 
@@ -37,7 +37,8 @@
         <!-- IMAGE SECTION -->
         <section id="image-section">
             <div class="image-container">
-                <img class="image-section-image" src="./img/image-rotation/programming-2-blur.jpg" alt="image">
+                <div class="image-slideshow"></div>
+                <!-- <img class="image-section-image" src="./img/image-rotation/programming-2-blur.jpg" alt="image"> -->
                 <img class="image-section-logo" src="./img/logos/bepro-logo.png" alt="BePro logo">
             </div>
 
@@ -46,26 +47,50 @@
         <!-- MISSION SECTION -->
         <section id="mission-section">
             <h1 class="section-header">our mission</h1>
-            <div class="section-container">
+            <div class="section-container-grid">
                 <ul class="mission-list">
                     <li>Reliability</li>
                     <li>Innovation</li>
                     <li>Successfullness</li>
                 </ul>
                 <div class="mission-text-container">
-                    <h4 class="mission-text-header">We care</h4>
+                    <h2 class="minor-text-header">We care</h2>
                     <p>There is nothing we care more about than the success of (y)our company.
-                        Here at <b>BePro</b> we take care of our partners, and plead to give you the best experience working with our products.</p>
+                        Here at <b>BePro</b> we take care of our partners, and plead to give you the best experience
+                        working with our products.</p>
                 </div>
             </div>
-
-            <img class="bottom-plant" src="./img/bottom-plant.png">
         </section>
 
         <!-- SECTION -->
-        <section>
-
+        <section id="whatwedo-section">
+            <h1 class="section-header">what we do</h1>
+            <dl>
+                <dt>We get in touch!</dt>
+                <dd>Finding out how our products can help you.</dd>
+                <dt>Plan our products!</dt>
+                <dd>We personalize all our products to your needs.</dd>
+                <dt>We make you an offer!</dt>
+                <dd>You can't refuse!</dd>
+                <dt>We get to work!</dt>
+                <dd>While you sit back and chillax.</dd>
+            </dl>
         </section>
+
+        <section id="cta-section">
+            <h1 class="section-header">what are you waiting for?</h1>
+            <div class="section-container-flex">
+                <div>
+                    <h2 class="cta-header">More about us!</h2>
+                    <a href="./about.html"><button class="cta-button">about us</button></a>
+                </div>
+                <div>
+                    <h2 class="cta-header">Get in touch!</h2>
+                    <a href="./contact.html"><button class="cta-button">contact us</button></a>
+                </div>
+            </div>
+        </section>
+
         <footer id="footer">
             ©BePro 2022
         </footer>

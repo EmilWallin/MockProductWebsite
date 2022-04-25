@@ -4,9 +4,8 @@
 
     font-family: 'Quicksand', sans-serif; */
 
-
 * {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 /* Ändringar av taggar */
 
@@ -14,7 +13,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #F1DDBF;
+    background-color: #f1ddbf;
 }
 
 a {
@@ -22,20 +21,28 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Antic Slab', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Antic Slab", serif;
 }
 
-
+section {
+    margin: 0;
+    padding: 0;
+}
 
 /* HEADER */
 .page-header {
-    background-color: #92BA92;
+    background-color: #92ba92;
     height: 80px;
     width: 100%;
 
     font-size: 2rem;
-    color:#92BA92;
+    color: #92ba92;
 }
 
 #header-logo {
@@ -49,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header-logo:hover {
-    background-color: #78938A;
+    background-color: #78938a;
 }
 
 .header-navbar {
@@ -65,16 +72,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-nav-link {
-    font-family: 'Antic Slab', serif;
+    font-family: "Antic Slab", serif;
 }
 
 .header-nav-link:hover {
-    background-color: #78938A;
+    background-color: #78938a;
 }
 
-
 .header-dropdown-menu {
-    position:absolute;
+    position: absolute;
     top: 15px;
     right: 30px;
 }
@@ -85,8 +91,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-navbar-dropdown {
     display: none;
-    background-color: #92BA92;
-    position:absolute;
+    background-color: #92ba92;
+    position: absolute;
     width: 100px;
     right: 50px;
     top: 0px;
@@ -100,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-dropdown-menu:hover > nav {
-    display:block;
+    display: block;
 }
 
 .header-navbar-dropdown:hover {
@@ -121,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FOOTER */
 #footer {
-    position:sticky;
+    background-color: #92ba92;
     bottom: 0;
     text-align: center;
     width: 100%;
@@ -131,24 +137,78 @@ h1, h2, h3, h4, h5, h6 {
 .section-header {
     text-align: center;
     font-size: 3rem;
+    margin: 25px 5% 25px 5%;
+}
+
+.minor-text-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* IMAGE SECTION */
 #image-section {
     text-align: center;
     margin: auto;
-    
 }
 
 .image-container {
-    display:flex;
+    display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
 }
 
+.image-slideshow {
+    height: 600px;
+    width: 100%;
+    background-image: url("/img/image-rotation/1.jpg");
+    background-position: center center;
+    background-size: cover;
+    animation: slideshow 60s infinite ease-in-out 1s;
+}
+
+/* FYI övergångarna funkar kanon i t.ex. Chrome men Firefox kan inte animera mellan background-image*/
+@keyframes slideshow {
+    17% {
+        background-image: url("/img/image-rotation/2.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(150%);
+    }
+    33% {
+        background-image: url("/img/image-rotation/3.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(100%);
+    }
+    50% {
+        background-image: url("/img/image-rotation/4.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(150%);
+    }
+    67% {
+        background-image: url("/img/image-rotation/5.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(100%);
+    }
+    84% {
+        background-image: url("/img/image-rotation/6.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(150%);
+    }
+    100% {
+        background-image: url("/img/image-rotation/1.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(100%);
+    }
+}
+
 .image-section-logo {
-    position:absolute;
+    position: absolute;
     width: 60%;
     margin: auto;
     z-index: 2;
@@ -159,12 +219,12 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     margin: auto;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 /* media query för telefon */
 @media screen and (max-width: 600px) {
-    .image-section-image {
+    .image-slideshow {
         height: 700px;
     }
     .image-section-logo {
@@ -174,41 +234,127 @@ h1, h2, h3, h4, h5, h6 {
 
 /* MISSION SECTION */
 #mission-section {
-
+    position: relative;
+    padding-bottom: 30px;
 }
 
-.section-container {
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+.section-container-grid {
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    justify-items: center;
 }
 
 .mission-list {
     font-size: 2em;
+    grid-column-start: 2;
 }
 
 .mission-text-container {
     text-align: center;
-    width: 40%;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 1.2rem;
+    grid-column-start: 3;
 }
 
-.mission-text-header {
+@media screen and (max-width: 600px) {
+    .section-container-grid {
+        grid-template-columns: 5% 1fr 5%;
+        text-align: center;
+    }
+
+    .mission-text-container {
+        width: 90%;
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+}
+
+/* WHAT WE DO SECTION */
+#whatwedo-section {
+    background: url("/img/sketch-photo-2-blur.jpg") center center/cover
+        no-repeat;
+    padding-top: 1px;
+    padding-bottom: 40px;
+}
+
+dl {
+    text-align: left;
+    margin: 0 25%;
+}
+
+dt {
+    font-size: 2rem;
+    font-family: "Antic Slab", serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
     font-size: 1.2em;
-    margin-bottom: 0;
-    padding-bottom: 0;
+}
+
+/* CTA SECTION */
+#cta-section {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.section-container-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cta-header {
+    font-size: 2.2rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.cta-button {
+    font-family: "Antic Slab", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: #92ba92;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: #525E75 solid 1px;
+}
+
+.cta-button:hover {
+    background-color: #78938a;
+}
+
+@media screen and (max-width: 600px) {
+    .section-container-flex {
+        display: grid;
+    }
 }
 
 
+/* ABOUT PAGE */
 
+#about-intro-section {
+    
+}
+
+.about-intro-container {
+
+}
 
 /* Bottom plant AESTHETIC */
+.plant-background {
+    background: url("/img/bottom-plant.png") no-repeat center bottom;
+    background-size: contain;
+}
+
 .bottom-plant {
-    display:flex;
-    width: 40%;
-    align-items: flex-end;
-    justify-content:space-around;
+    position: absolute;
+    width: 30%;
+    left: 0;
+    right: 0;
     margin: auto;
     z-index: 1;
 }
-
