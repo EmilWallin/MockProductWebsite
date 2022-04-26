@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-    <!-- unsplash.com -->
-
     <head>
-        <title>BePro - The best product ever</title>
+        <title>BePro - Contact Us!</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon/favicon32x32WHITE.ico">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
     </head>
 
     <body>
-        <header class="page-header">
+        <header id="page-header">
             <a class="header-logo-link" href="/index.html">
                 <img id="header-logo" src="./img/logos/bepro-logo-small.png" alt="BePro logo">
             </a>
@@ -34,11 +35,45 @@
             </div>
         </header>
 
-        <div class="plant-background">
+        <div id="page-header-margin"></div>
 
-        </div>
-        <footer id="footer">
-            ©BePro 2022
+        <!-- INTRO SECTION -->
+        <section id="contact-intro" class="z-index-ten">
+            <h1 class="section-header contact-section-header">contact us!</h1>
+            <p class="contact-text">Fill out this form to send a message to our excellent customer service!</p>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section id="contact-form-section" class="z-index-ten">
+            <form class="contact-form">
+                <input type="text" name="firstName" placeholder="first name or company" required>
+                <input type="text" name="lastName" placeholder="last name">
+                <br>
+                <input class="input-email" type="email" name="email" placeholder="email" required>
+                <br>
+                <label for="typeOfInquiery">inquiry</label>
+                <br>
+                <select name="typeOfInquiry">
+                    <option>initial contact</option>
+                    <option>product offer</option>
+                    <option>discussion</option>
+                    <option>support ticket</option>
+                </select>
+                <br>
+                <textarea maxlength="500" placeholder="your message" required></textarea>
+                <br>
+                <div class="troll-container">
+                    <button class="contact-button" type="submit">send message</button>
+                </div>
+            </form>
+        </section>
+
+
+        <footer id="footer" class="contact-footer">
+            <p class="footer-copyright z-index-ten">©BePro 2022</p>
+            <div class="bottom-plant-container">
+                <img class="bottom-plant" src="./img/bottom-plant.png" alt="plant picture">
+            </div>
         </footer>
     </body>
 
