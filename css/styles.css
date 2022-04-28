@@ -1,26 +1,32 @@
-/* https://colorhunt.co/palette/f1ddbf525e7578938a92ba92 */
-
-/*     font-family: 'Antic Slab', serif;
-
-    font-family: 'Quicksand', sans-serif; */
-
-/* Ändringar av taggar */
+/* *            Variabler */
+:root {
+    /* Färger */
+    --clr-header: #2d2849;
+    --clr-navHover: #3a3650;
+    --clr-bg: #3d3b57;
+    --clr-sec: #796892;
+    --clr-sec2: #78688d;
+    --clr-btnHover: #b9a0cf;
+    --clr-dark: #181717;
+    --clr-text: #e9d5da;
+}
 
 /* Tar bort vita kanter */
 body {
     padding: 0;
     margin: 0;
-    background-color: #f1ddbf;
+    background-color: var(--clr-bg);
 }
 
 a {
-    color: black;
+    color: var(--clr-text);
     text-decoration: none;
 }
 
-/* FONTS */
+/* *            FONT CHANGES */
 * {
     font-family: "Quicksand", sans-serif;
+    color: var(--clr-text);
 }
 
 h1,
@@ -32,24 +38,24 @@ h6 {
     font-family: "Antic Slab", serif;
 }
 
-/* GENERELLT FÖR SECTIONS */
+/* MARGIN OCH PADDING GRUNDER FÖR SECTIONS */
 section {
     margin: 0;
-    padding: 0;
+    padding: 50px 0px;
 }
 
-/* HEADER */
+/* *                 HEADER */
 #page-header {
-    background-color: #92ba92;
+    background-color: var(--clr-header);
     height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
     font-size: 2rem;
-    color: #92ba92;
     z-index: 5;
 }
 
+/* LOGO */
 #header-logo {
     position: relative;
     height: 60px;
@@ -62,9 +68,10 @@ section {
 }
 
 #header-logo:hover {
-    background-color: #78938a;
+    background-color: var(--clr-navHover);
 }
 
+/* NAVBAR */
 .header-navbar {
     position: absolute;
     right: 20px;
@@ -80,25 +87,34 @@ section {
 .header-nav-link {
     font-family: "Antic Slab", serif;
     border-radius: 5px;
+    opacity: 0.5;
 }
 
 .header-nav-link:hover {
-    background-color: #78938a;
+    background-color: var(--clr-navHover);
+    opacity: 1;
 }
 
 .header-dropdown-menu {
     position: absolute;
     top: 15px;
     right: 30px;
+    text-align: center;
 }
 
 .header-dropdown-icon {
     height: 50px;
+    filter: invert(100%);
+    opacity: 0.5;
+}
+
+.header-dropdown-menu:hover .header-dropdown-icon {
+    opacity: 1;
 }
 
 .header-navbar-dropdown {
     display: none;
-    background-color: #92ba92;
+    background-color: var(--clr-navHover);
     position: absolute;
     width: 100px;
     right: 50px;
@@ -107,6 +123,7 @@ section {
 }
 
 .header-navbar-dropdown > a {
+    font-size: 1.8rem;
     margin: 5px;
     padding: 2px;
     transition: background-color, 0.2s;
@@ -114,31 +131,35 @@ section {
 
 .header-dropdown-menu:hover > nav {
     display: block;
+    position: fixed;
+    top: 60px;
+    right: 10px;
 }
 
 .header-navbar-dropdown:hover {
     display: block;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .header-dropdown-menu {
         display: none;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .header-navbar {
         display: none;
     }
 }
 
+/* Margin för about och contact. Behövs pga header=fixed */
 #page-header-margin {
     height: 80px;
 }
 
-/* FOOTER */
+/* *                FOOTER */
 #footer {
-    background-color: #92ba92;
+    background-color: var(--clr-header);
     bottom: 0;
     text-align: center;
     width: 100%;
@@ -146,18 +167,19 @@ section {
 
 .footer-copyright {
     margin-bottom: 0;
-    color: #f1ddbf;
+    color: var(--clr-text);
 }
 
 .contact-footer {
     position: fixed;
 }
 
-/* SECTION HEADERS */
+/* *             SECTION HEADERS */
 .section-header {
     text-align: center;
     font-size: 3rem;
     margin: 25px 5% 25px 5%;
+    font-family: "Bitter", serif;
 }
 
 .minor-text-header {
@@ -166,13 +188,14 @@ section {
 }
 
 /*  */
-/* * INDEX */
+/* *                INDEX  */
 /*  */
 
 /* IMAGE SECTION */
 #image-section {
     text-align: center;
     margin: auto;
+    background-color: var(--clr-bg);
 }
 
 .image-container {
@@ -191,43 +214,44 @@ section {
     animation: slideshow 60s infinite ease-in-out 1s;
 }
 
+/* Animation för bildspel */
 /* FYI övergångarna funkar kanon i t.ex. Chrome men Firefox kan inte animera mellan background-image*/
 @keyframes slideshow {
     17% {
         background-image: url("/img/image-rotation/2.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%);
+        filter: brightness(150%) saturate(150%);
     }
     33% {
         background-image: url("/img/image-rotation/3.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%);
+        filter: brightness(100%) saturate(80%);
     }
     50% {
         background-image: url("/img/image-rotation/4.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%);
+        filter: brightness(150%) saturate(150%);
     }
     67% {
         background-image: url("/img/image-rotation/5.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%);
+        filter: brightness(100%) saturate(80%);
     }
     84% {
         background-image: url("/img/image-rotation/6.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%);
+        filter: brightness(150%) saturate(150%);
     }
     100% {
         background-image: url("/img/image-rotation/1.jpg");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%);
+        filter: brightness(100%) saturate(100%);
     }
 }
 
@@ -236,6 +260,19 @@ section {
     width: 60%;
     margin: auto;
     z-index: 2;
+    animation: logo-animation 15s linear infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        filter: invert(100%) hue-rotate(180deg);
+    }
+    50% {
+        filter: invert(0) hue-rotate(0deg);
+    }
+    100% {
+        filter: invert(100%) hue-rotate(180deg);
+    }
 }
 
 .image-section-image {
@@ -246,8 +283,7 @@ section {
     object-fit: cover;
 }
 
-/* media query för telefon */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .image-slideshow {
         height: 700px;
     }
@@ -259,68 +295,79 @@ section {
 /* MISSION SECTION */
 #mission-section {
     position: relative;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    background-color: var(--clr-bg);
 }
 
 .mission-container-grid {
     display: grid;
     grid-template-columns: 5% 1fr 1fr 5%;
     justify-items: center;
-    background-color: #92ba92;
     margin: auto;
-    max-width: 800px;
-    border-radius: 25px;
     padding: 5px;
+    width: 80%;
+    border-radius: 25px;
+    border: 1px solid var(--clr-dark);
+    box-shadow: 4px 4px 4px var(--clr-dark);
 }
 
 .mission-list {
     font-size: 2em;
     grid-column-start: 2;
+    margin: auto;
 }
 
 .mission-text-container {
     text-align: center;
+    margin: auto;
     width: 80%;
     max-width: 400px;
     font-size: 1.2rem;
     grid-column-start: 3;
 }
 
-@media screen and (max-width: 600px) {
-    .section-container-grid {
-        grid-template-columns: 5% 1fr 5%;
-        text-align: center;
+@media screen and (max-width: 768px) {
+    .mission-container-grid {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .mission-text-container {
         width: 90%;
-        grid-row-start: 2;
+        grid-row-start: 3;
         grid-column-start: 2;
     }
 }
 
-span {
+.font-size-change {
     font-size: 1.6rem;
     font-weight: bold;
 }
 
-/* WHAT WE DO SECTION */
-#whatwedo-section {
+/* GAME PLAN SECTION */
+#gameplan-section {
     background: url("/img/sketch-photo-2-blur.jpg") center center/cover
         no-repeat;
-    padding-top: 1px;
-    padding-bottom: 40px;
+    filter: hue-rotate(255deg);
+    padding-top: 60px;
+    padding-bottom: 100px;
     margin: auto;
-    max-width: 800px;
-    border-radius: 25px;
+    margin-top: 0;
+}
+
+.black-text {
+    color: black;
 }
 
 dl {
-    text-align: left;
+    text-align: center;
     margin: 0 25%;
 }
 
 dt {
+    color: black;
     font-size: 2rem;
     font-family: "Antic Slab", serif;
     font-weight: bold;
@@ -329,23 +376,29 @@ dt {
 
 dd {
     font-size: 1.2em;
+    color: black;
+    text-align: right;
 }
 
 /* CTA SECTION */
 #cta-section {
     text-align: center;
+    padding-top: 80px;
     padding-bottom: 80px;
+    background-color: var(--clr-bg);
 }
 
 .section-container-flex {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #92ba92;
+    background-color: var(--clr-bg);
     padding: 15px;
     border-radius: 25px;
     margin: auto;
     max-width: 600px;
+    border: 1px solid var(--clr-dark);
+    box-shadow: 4px 4px 4px var(--clr-dark);
 }
 
 .cta-header {
@@ -357,37 +410,46 @@ dd {
     font-family: "Antic Slab", serif;
     font-size: 1.8rem;
     font-weight: bold;
-    background-color: #92ba92;
+    background-color: var(--clr-sec);
     padding: 15px;
     margin: 10px;
     border-radius: 10px;
     transition: background-color 0.2s;
     cursor: pointer;
-    border: #525e75 solid 1px;
+    border: var(--clr-dark) solid 1px;
 }
 
 .cta-button:hover {
-    background-color: #78938a;
+    background-color: var(--clr-btnHover);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .section-container-flex {
         display: grid;
     }
 }
 
 /*  */
-/* * ABOUT PAGE */
+/* *                ABOUT PAGE */
 /*  */
 
 /* intro section */
+#about-intro-section {
+    padding-bottom: 60px;
+}
+
 .about-intro-container {
-    padding: 0 0 40px 0;
+    padding: 40px 0 40px 0;
     display: grid;
     grid-template-columns: 5% 1fr 1fr 3%;
     justify-content: space-evenly;
     align-items: top;
     font-size: 1.5rem;
+    margin: auto;
+    width: 80%;
+    border-radius: 25px;
+    border: 1px solid var(--clr-dark);
+    box-shadow: 4px 4px 4px var(--clr-dark);
 }
 
 @media screen and (max-width: 600px) {
@@ -411,14 +473,46 @@ dd {
 
 .about-intro-image {
     max-width: 100%;
+    border-radius: 15px;
+    animation: about-image-animation 10s ease infinite;
+}
+
+@keyframes about-image-animation {
+    0% {
+        filter: blur(0) saturate(20%);
+    }
+    50% {
+        filter: blur(2px) saturate(150%);
+    }
+    100% {
+        filter: blur(0) saturate(20%);
+    }
 }
 
 /* about the product */
 #about-the-product-section {
-    background-color: #92ba92;
-    padding: 1px 0 0 0;
-    margin: 0 5% 5px 5%;
-    border-radius: 25px;
+    background: linear-gradient(
+        45deg,
+        var(--clr-sec),
+        var(--clr-bg),
+        var(--clr-bg),
+        var(--clr-header)
+    );
+    background-size: 400%;
+    padding: 110px 0 60px 0;
+    animation: about-the-product-gradient 25s ease-in-out infinite;
+}
+
+@keyframes about-the-product-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .rating-container {
@@ -434,13 +528,13 @@ dd {
 
 .rating {
     justify-self: center;
-    background-color: #f0eae3;
+    background-color: var(--clr-sec2);
     border-radius: 25px;
     margin: 0 20px;
     max-width: 280px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .rating-container {
         display: block;
         justify-content: center;
@@ -452,7 +546,7 @@ dd {
 }
 
 .rating-sender {
-    color: #525e75;
+    color: var(--clr-dark);
 }
 
 .about-the-product-container {
@@ -468,10 +562,11 @@ dd {
 }
 
 .about-the-product-text {
-    margin: 25px;
+    margin: 25px auto 25px auto;
+    max-width: 500px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .about-the-product-container {
         grid-template-columns: 1fr;
     }
@@ -481,25 +576,33 @@ dd {
 #about-product-benchmark {
     text-align: center;
     display: block;
-    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 100px;
 }
 
 .table-container {
     text-align: center;
-    width: 100%;
     font-size: 1.5rem;
-    width: 50%;
     margin: auto;
 }
 
 .performance-table {
     border-collapse: collapse;
-    width: 100%;
+    margin: auto;
+    width: 60%;
+    max-width: 400px;
+    box-shadow: 4px 4px 4px var(--clr-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .performance-table {
+        width: 100%;
+    }
 }
 
 th {
     font-size: 1.1em;
-    background-color: #f1ddbf;
+    background-color: var(--clr-sec);
 }
 td {
     font-size: 0.9em;
@@ -507,11 +610,11 @@ td {
 
 td,
 th {
-    border: #525e75 1px solid;
+    border: black 1px solid;
 }
 
 tr:nth-child(2) {
-    background-color: #92ba92;
+    background-color: green;
 }
 tr:nth-child(n + 3) {
     background-color: #ff5e50;
@@ -521,13 +624,15 @@ tr:nth-child(n + 3) {
 #about-cta-section {
     display: block;
     text-align: center;
-    background-color: #92ba92;
+    background-color: var(--clr-bg);
+    max-width: 350px;
     padding-top: 10px;
     padding-bottom: 20px;
-    border-radius: 25px;
-    max-width: 350px;
     margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
+    border: 1px solid var(--clr-dark);
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px var(--clr-dark);
 }
 
 .about-cta-container {
@@ -536,24 +641,22 @@ tr:nth-child(n + 3) {
 }
 
 /*  */
-/* * CONTACT PAGE */
+/* *                CONTACT PAGE */
 /*  */
 
 /* INTRO SECTION */
 #contact-intro {
     max-width: 400px;
-    margin: auto;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--clr-dark);
+    box-shadow: 4px 4px 4px var(--clr-dark);
 }
 
 .contact-section-header {
     margin-bottom: 5px;
-}
-
-.contact-text {
-    background-color: #92ba92;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
 }
 
 #contact-form-section {
@@ -561,33 +664,58 @@ tr:nth-child(n + 3) {
 }
 
 .contact-form {
-    background-color: #92ba92;
+    background-color: var(--clr-bg);
     margin: auto;
     border-radius: 25px;
     max-width: 700px;
     text-align: center;
     margin-bottom: 25px;
-    padding-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border: 1px solid var(--clr-dark);
+    box-shadow: 4px 4px 4px var(--clr-dark);
+    opacity: 0.8;
 }
 
 input {
+    color: black;
+    background-color: var(--clr-sec);
     border-radius: 5px;
     height: 30px;
     font-size: 1.1rem;
     margin: 5px 15px;
+    border: 1px solid var(--clr-dark);
+}
+
+input:focus {
+    outline: 2px solid var(--clr-sec);
 }
 
 .input-email {
     width: 260px;
 }
 
+select,
+option {
+    color: black;
+    background-color: var(--clr-sec);
+    border: 1px solid var(--clr-dark);
+}
+
 textarea {
+    color: black;
+    background-color: var(--clr-sec);
     border-radius: 5px;
     min-width: 350px;
     min-height: 120px;
     max-width: 650px;
     max-height: 300px;
     margin: 15px auto 15px auto;
+    border: 1px solid var(--clr-dark);
+}
+
+textarea:focus {
+    outline: 2px solid var(--clr-sec);
 }
 
 .troll-container {
@@ -598,14 +726,16 @@ textarea {
 }
 
 .contact-button {
-    background-color: #92ba92;
+    color: black;
+    background-color: var(--clr-sec2);
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 15px;
     min-width: 120px;
     min-height: 40px;
     margin-bottom: 20px;
     cursor: pointer;
+    border: 1px solid var(--clr-dark);
 }
 
 .troll-container:hover .contact-button {
@@ -614,7 +744,7 @@ textarea {
 }
 
 .contact-button:hover {
-    background-color: #78938a;
+    background-color: var(--clr-btnHover);
 }
 
 /* Bottom plant AESTHETIC */
@@ -624,13 +754,14 @@ textarea {
 
 .bottom-plant {
     position: absolute;
-    width: 60%;
+    max-height: 790px;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 1;
     bottom: 0;
     animation: plant-animation 10s ease-in-out infinite;
+    filter: blur(0px);
 }
 
 @keyframes plant-animation {
@@ -638,7 +769,8 @@ textarea {
         left: -10px;
     }
     50% {
-        width: 63%;
+        max-height: 800px;
+        filter: blur(3px);
     }
     75% {
         left: 10px;
