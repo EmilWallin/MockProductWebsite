@@ -208,7 +208,7 @@ section {
 .image-slideshow {
     height: 600px;
     width: 100%;
-    background-image: url("./img/image-rotation/1.jpg");
+    background-image: url("../img/image-rotation/1.jpg");
     background-position: center center;
     background-size: cover;
     animation: slideshow 60s infinite ease-in-out 1s;
@@ -218,37 +218,37 @@ section {
 /* FYI övergångarna funkar kanon i t.ex. Chrome men Firefox kan inte animera mellan background-image*/
 @keyframes slideshow {
     17% {
-        background-image: url("./img/image-rotation/2.jpg");
+        background-image: url("../img/image-rotation/2.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(150%) saturate(150%);
     }
     33% {
-        background-image: url("./img/image-rotation/3.jpg");
+        background-image: url("../img/image-rotation/3.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(100%) saturate(80%);
     }
     50% {
-        background-image: url("./img/image-rotation/4.jpg");
+        background-image: url("../img/image-rotation/4.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(150%) saturate(150%);
     }
     67% {
-        background-image: url("./img/image-rotation/5.jpg");
+        background-image: url("../img/image-rotation/5.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(100%) saturate(80%);
     }
     84% {
-        background-image: url("./img/image-rotation/6.jpg");
+        background-image: url("../img/image-rotation/6.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(150%) saturate(150%);
     }
     100% {
-        background-image: url("./img/image-rotation/1.jpg");
+        background-image: url("../img/image-rotation/1.jpg");
         background-position: center center;
         background-size: cover;
         filter: brightness(100%) saturate(100%);
