@@ -348,7 +348,7 @@ section {
 
 /* GAME PLAN SECTION */
 #gameplan-section {
-    background: url("./img/sketch-photo-2-blur.jpg") center center/cover
+    background: url("../img/sketch-photo-2-blur.jpg") center center/cover
         no-repeat;
     filter: hue-rotate(255deg);
     padding-top: 60px;
