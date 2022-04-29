@@ -221,37 +221,37 @@ section {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/2.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%) saturate(150%);
+        /* filter: brightness(150%) saturate(150%); */
     }
     33% {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/3.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%) saturate(80%);
+        /* filter: brightness(100%) saturate(80%); */
     }
     50% {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/4.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%) saturate(150%);
+        /* filter: brightness(150%) saturate(150%); */
     }
     67% {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/5.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%) saturate(80%);
+        /* filter: brightness(100%) saturate(80%); */
     }
     84% {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/6.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(150%) saturate(150%);
+        /* filter: brightness(150%) saturate(150%); */
     }
     100% {
         background-image: url("https://github.com/EmilWallin/Webbapplikationer-Inl1/blob/main/img/image-rotation/1.jpg?raw=true");
         background-position: center center;
         background-size: cover;
-        filter: brightness(100%) saturate(100%);
+        /* filter: brightness(100%) saturate(100%); */
     }
 }
 
