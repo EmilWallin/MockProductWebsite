@@ -95,6 +95,7 @@ section {
     opacity: 1;
 }
 
+/* DROPDOWN MENU */
 .header-dropdown-menu {
     position: absolute;
     top: 15px;
@@ -177,9 +178,15 @@ section {
 /* *             SECTION HEADERS */
 .section-header {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4.5rem;
     margin: 25px 5% 25px 5%;
     font-family: "Bitter", serif;
+}
+
+@media screen and (max-width: 768px) {
+    .section-header {
+        font-size: 3rem;
+    }
 }
 
 .minor-text-header {
@@ -699,13 +706,23 @@ tr:nth-child(n + 3) {
 
 /* INTRO SECTION */
 #contact-intro {
-    max-width: 400px;
+    max-width: 500px;
     margin: 40px auto;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     border: 1px solid var(--clr-dark);
     box-shadow: 4px 4px 4px var(--clr-dark);
+}
+
+.contact-text {
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-text {
+        font-size: 1.1em;
+    }
 }
 
 .contact-section-header {
